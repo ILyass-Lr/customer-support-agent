@@ -41,8 +41,7 @@ cdk/node_modules/
 # =============================================================================
 # AgentCore CLI
 # =============================================================================
-agentcore/.cli/logs/
-agentcore/.cli/!(deployed-state.json)
+agentcore/.cli/
 agentcore/.cache/
 agentcore/.llm-context/
 

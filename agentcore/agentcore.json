@@ -41,7 +41,7 @@
       "dataSources": [
         {
           "type": "S3",
-          "uri": "s3://customer-support-692707726425-eu-west-1-an/product_catalog.txt"
+          "uri": "s3://customer-support-<ACCOUNT_ID>-<REGION>-an/product_catalog.txt"
         }
       ]
     }
@@ -59,7 +59,7 @@
           "name": "order-tracker",
           "targetType": "apiGateway",
           "apiGateway": {
-            "restApiId": "qu9tbpx30h",
+            "restApiId": "<API_GATEWAY_REST_API_ID>",
             "stage": "prod",
             "apiGatewayToolConfiguration": {
               "toolFilters": [
@@ -75,7 +75,7 @@
           "name": "refund-processor",
           "targetType": "lambdaFunctionArn",
           "lambdaFunctionArn": {
-            "lambdaArn": "arn:aws:lambda:eu-west-1:692707726425:function:refund-processor",
+            "lambdaArn": "arn:aws:lambda:<REGION>:<ACCOUNT_ID>:function:refund-processor",
             "toolSchemaFile": "lambda-src/lambda_schema"
           }
         },
@@ -92,7 +92,7 @@
                   {
                     "configuration": {
                       "knowledgeBase": {
-                        "knowledgeBaseId": "XZWE0MEFIS"
+                        "knowledgeBaseId": "<KNOWLEDGE_BASE_ID>"
                       }
                     }
                   }
@@ -108,7 +108,7 @@
               "name": "Retrieve",
               "description": "Search the product catalog and customer support knowledge base. Use this for questions about product specifications, return policies, warranty terms, loyalty program tier benefits (Silver/Gold/Platinum), shipping details, and other store policy information.",
               "parameterValues": {
-                "knowledgeBaseId": "XZWE0MEFIS"
+                "knowledgeBaseId": "<KNOWLEDGE_BASE_ID>"
               },
               "parameterOverrides": []
             }
