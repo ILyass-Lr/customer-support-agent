@@ -39,11 +39,15 @@ cdk/cdk.out/
 cdk/node_modules/
 
 # =============================================================================
-# AgentCore CLI
+# AgentCore CLI & generated artifacts
 # =============================================================================
 agentcore/.cli/
 agentcore/.cache/
 agentcore/.llm-context/
+agentcore/aws-targets.json
+agentcore/cdk/cdk.out/
+agentcore/cdk/dist/
+agentcore/cdk/node_modules/
 
 # =============================================================================
 # Kiro IDE

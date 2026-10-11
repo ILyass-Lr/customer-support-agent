@@ -1,9 +1,19 @@
-# Secrets (local environment files are never committed)
+# Secrets & environment
 .env.local
 
-# CDK Build Artifacts
+# Deployment targets — contains account ID and region
+aws-targets.json
+
+# CDK build artifacts (generated, contain hardcoded account IDs)
 cdk/cdk.out/
+cdk/dist/
 cdk/node_modules/
 
-# CLI Internals — ignore everything including deployed state
+# CLI internals — contains deployed resource ARNs and account IDs
 .cli/
+
+# Ephemeral staging
+.cache/
+
+# LLM context cache
+.llm-context/
